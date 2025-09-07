@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Hero Section -->
+<div class="hero fade-in text-center">
+  <div class="hero-content">
+    <h1 class="display-3 mb-3">ℹ️ About AirHealth</h1>
+    <p class="lead mb-4 px-2">
+      AirHealth is a <strong>Machine Learning-powered platform</strong> that helps you 
+      predict the <strong>Health Impact Level</strong> of air quality conditions 
+      based on commonly measured pollutants and weather data.
+    </p>
+  </div>
+</div>
+
+<!-- About Content -->
+<div class="features-section mx-auto text-center" style="max-width: 800px;">
+  <div class="card mb-4 p-4">
+    <h3 class="card-title">🌟 Our Mission</h3>
+    <p class="card-text">
+      To make air quality analysis accessible, easy, and actionable for everyone — 
+      from individuals concerned about their health to policymakers and researchers 
+      working on cleaner environments.
+    </p>
+  </div>
+
+  <div class="card mb-4 p-4">
+    <h3 class="card-title">🛠 Technology</h3>
+    <p class="card-text">
+      AirHealth uses advanced <strong>classification models</strong> like 
+      <strong>Random Forest</strong>, <strong>Gradient Boosting</strong>, 
+      and <strong>Logistic Regression</strong>. These models analyze 
+      <strong>pollutant levels, weather parameters, and AQI data</strong> 
+      to provide precise predictions of health impact levels.
+    </p>
+  </div>
+
+  <div class="card mb-4 p-4">
+    <h3 class="card-title">📊 Data Sources</h3>
+    <p class="card-text">
+      Our model is trained on curated <strong>air quality datasets</strong> that 
+      include AQI levels, pollutant concentrations, and meteorological factors.  
+      This ensures predictions are both accurate and reliable.
+    </p>
+  </div>
+
+  <div class="card mb-4 p-4">
+    <h3 class="card-title">👥 The Team</h3>
+    <p class="card-text">
+      AirHealth was built by passionate engineers and data enthusiasts to 
+      combine <strong>machine learning</strong> with <strong>public health awareness</strong>.  
+      This project represents a step toward using data for a healthier tomorrow.
+    </p>
+  </div>
+</div>
+
+<!-- Call to Action -->
+<div class="start-now-container">
+  <a href="{{ url_for('predict') }}" class="btn btn-primary btn-lg px-5 mt-3">
+    🚀 Check Your Air Quality
+  </a>
+</div>
+{% endblock %}

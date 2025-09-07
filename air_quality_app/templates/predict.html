@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="hero fade-in text-center">
+  <div class="hero-content">
+    <h1 class="display-4 mb-3">🔮 Air Quality Prediction</h1>
+    <p class="lead mb-4 px-2">
+      Enter pollutant and weather values to predict the <strong>Health Impact Level</strong> instantly.
+    </p>
+  </div>
+</div>
+
+<!-- Form Section -->
+<div class="form-container mx-auto" style="max-width: 600px;">
+  {% if error %}
+    <div class="alert alert-danger text-center mb-3">
+      {{ error }}
+    </div>
+  {% endif %}
+
+  <form method="POST" action="{{ url_for('predict') }}" class="card p-4 shadow">
+    <div class="mb-3">
+      <input type="number" step="any" name="AQI" placeholder="AQI" required class="form-control" />
+    </div>
+    <div class="mb-3">
+      <input type="number" step="any" name="PM10" placeholder="PM10" required class="form-control" />
+    </div>
+    <div class="mb-3">
+      <input type="number" step="any" name="PM2_5" placeholder="PM2.5" required class="form-control" />
+    </div>
+    <div class="mb-3">
+      <input type="number" step="any" name="NO2" placeholder="NO₂" required class="form-control" />
+    </div>
+    <div class="mb-3">
+      <input type="number" step="any" name="SO2" placeholder="SO₂" required class="form-control" />
+    </div>
+    <div class="mb-3">
+      <input type="number" step="any" name="O3" placeholder="O₃" required class="form-control" />
+    </div>
+    <div class="mb-3">
+      <input type="number" step="any" name="Temperature" placeholder="Temperature (°C)" required class="form-control" />
+    </div>
+    <div class="mb-3">
+      <input type="number" step="any" name="humidity" placeholder="Humidity (%)" required class="form-control" />
+    </div>
+    <div class="mb-3">
+      <input type="number" step="any" name="windspeed" placeholder="Wind Speed (m/s)" required class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg w-100">Predict</button>
+  </form>
+
+  {% if predicted_class is not none %}
+    <div class="result-container text-center mt-4">
+      <p><strong>Predicted Health Impact Class:</strong></p>
+      <span class="badge {{ badge_class }}">{{ predicted_label }}</span>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

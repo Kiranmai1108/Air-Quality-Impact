@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Hero Section -->
+<div class="hero fade-in text-center">
+  <div class="hero-content">
+    <h1 class="display-3 mb-3">🌿 AirHealth – Air Quality Health Checker</h1>
+    <p class="lead mb-4 px-2">
+      Predict your environment's <strong>Health Impact Level</strong> instantly using advanced 
+      <strong>Machine Learning</strong> models trained on AQI and weather data.  
+      Stay informed. Stay safe. Breathe better.
+    </p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a class="btn btn-primary btn-lg mt-2 px-4" href="{{ url_for('predict') }}">🔮 Check Air Quality</a>
+      <a class="btn btn-light btn-lg mt-2 px-4" href="{{ url_for('tips') }}">💡 Health Tips</a>
+    </div>
+  </div>
+</div>
+
+<!-- Feature Section -->
+<div class="features-section mt-5 mx-auto text-center" style="max-width: 700px;">
+  <div class="card mb-4 p-4">
+    <h3 class="card-title">📡 Quick Predictions</h3>
+    <p class="card-text">
+      Just enter <strong>AQI, PM2.5, PM10, NO₂, SO₂, O₃, temperature, humidity, and wind speed</strong> 
+      to instantly classify the health impact level.
+    </p>
+  </div>
+
+  <div class="card mb-4 p-4">
+    <h3 class="card-title">🌐 Easy & Accessible</h3>
+    <p class="card-text">
+      AirHealth works on <strong>desktop, tablet, or mobile</strong> with a clean, responsive design.  
+      No installations, no fuss.
+    </p>
+  </div>
+
+  <div class="card mb-4 p-4">
+    <h3 class="card-title">⚡ Machine Learning Powered</h3>
+    <p class="card-text">
+      Powered by robust models like <strong>Random Forest</strong>, <strong>Gradient Boosting</strong>, 
+      and <strong>Logistic Regression</strong> for accurate and reliable classifications.
+    </p>
+  </div>
+
+  <a href="{{ url_for('predict') }}" class="btn btn-primary btn-sm px-5 mt-3">
+    Predict Now →
+  </a>
+</div>
+{% endblock %}

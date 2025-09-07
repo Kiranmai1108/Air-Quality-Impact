@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Hero Section -->
+<div class="hero text-center fade-in">
+  <div class="hero-content">
+    <h1 class="display-4 mb-3">📊 Air Quality Insights</h1>
+    <p class="lead px-2">
+      Discover the factors influencing air quality and their health impact, presented in a simple, clean way.
+    </p>
+  </div>
+</div>
+
+<!-- Insights Section -->
+<div class="insights-section">
+  {% for insight in insights_data %}
+  <div class="card shadow-sm fade-in-scroll">
+    <h4 class="card-title">💡 {{ insight.title }}</h4>
+    <p class="card-text">{{ insight.content }}</p>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Resources Section -->
+<div class="resources-card fade-in-scroll">
+  <h4>📚 Further Reading & Resources</h4>
+  <p class="text-muted">
+    Learn more about air quality, its health impact, and ways to stay safe:
+  </p>
+  <ul>
+    <li><a href="https://www.epa.gov/air-quality-data" target="_blank">Environmental Protection Agency (EPA)</a></li>
+    <li><a href="https://www.who.int/health-topics/air-pollution" target="_blank">World Health Organization (WHO)</a></li>
+    <li><a href="https://www.airnow.gov/" target="_blank">AirNow.gov</a></li>
+  </ul>
+</div>
+{% endblock %}

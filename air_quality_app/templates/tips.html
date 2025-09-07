@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Hero Section -->
+<div class="hero text-center fade-in">
+  <div class="hero-content">
+    <h1 class="display-4 mb-3">💡 Health Tips Based on Air Quality</h1>
+    <p class="lead px-2">
+      Stay safe and healthy by understanding how air quality levels impact your daily activities.
+    </p>
+  </div>
+</div>
+
+<!-- Tips Section -->
+<div class="tips-section">
+  <div class="tip-card fade-in-scroll">
+    <h5><span class="badge very-low me-2">Very Low</span> / <span class="badge low me-2">Low</span> Impact</h5>
+    <p><strong>Air is generally safe.</strong> Enjoy outdoor activities freely. Stay hydrated and use sun protection if needed.</p>
+  </div>
+
+  <div class="tip-card fade-in-scroll">
+    <h5><span class="badge moderate me-2">Moderate</span> Impact</h5>
+    <p><strong>Sensitive individuals should take care.</strong> Children, elderly, or those with respiratory conditions should limit strenuous activities and monitor symptoms.</p>
+  </div>
+
+  <div class="tip-card fade-in-scroll">
+    <h5><span class="badge high me-2">High</span> Impact</h5>
+    <p><strong>Limit outdoor activities.</strong> Everyone should reduce prolonged outdoor exertion. Sensitive groups should avoid outdoor exposure and consider an N95 mask if going out.</p>
+  </div>
+
+  <div class="tip-card fade-in-scroll">
+    <h5><span class="badge very-high me-2">Very High</span> Impact</h5>
+    <p><strong>Stay indoors.</strong> Keep doors and windows closed, use an air purifier if available, and seek medical advice for any breathing or chest discomfort.</p>
+  </div>
+</div>
+
+<!-- General Recommendations -->
+<div class="resources-card fade-in-scroll">
+  <h4>🌍 General Recommendations</h4>
+  <ul>
+    <li>Stay updated with your local air quality forecasts.</li>
+    <li>Reduce exposure during peak pollution hours (e.g., rush hours).</li>
+    <li>Maintain clean indoor air—ventilate during low pollution times.</li>
+    <li>Consult a healthcare professional if you have pre-existing conditions.</li>
+  </ul>
+</div>
+{% endblock %}
